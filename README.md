@@ -1,2 +1,2 @@
-# project template
-Template repository for a SEA:ME (OER) project.
+# DES-ParkDistanceControl
+A Distributed Embedded Systems Module Project: Park Distance Control (PDC).

@@ -1,40 +1,26 @@
-# **DES Project - PDC System**
-## Implementation of Park Distance Control System for the PiRacer  
+# **DES Project - PDC(Park Distance Control) System**
+
 </br>
 
 
-# Index
-#### [Introduction](#introduction-1)
-#### [Background Information](#background-information-1)
-#### [Project Goals & Objectives](#project-goals-and-objectives)
-#### [Technical Requirements](#technical-requirements-1)
-#### [System Architecture](#system-architecture-1)
-#### [Software Design](#software-design-1)
-#### [Implementation](#implementation-1)
-#### [Project Timeline](#project-timeline-1)
-#### [Collaboration and Teamwork](#collaboration-and-teamwork-1)
-#### [Mentorship and Support](#mentorship-and-support-1)
-#### [Reflection and Self-Assessment](#reflection-and-self-assessment-1)
-#### [Results](#results-1)
-#### [Submission](#submission-1)
-#### [References](#references-1)
+- [**DES Project - PDC(Park Distance Control) System**](#des-project---pdcpark-distance-control-system)
+  - [Introduction](#introduction)
+  - [Project Goals and Objectives](#project-goals-and-objectives)
+  - [Technical Requirements](#technical-requirements)
+  - [Project Timeline](#project-timeline)
+  - [Submission](#submission)
+  - [Evaluation](#evaluation)
+  - [References](#references)
+
 </br>
 
-# Introduction
+## Introduction
 
 The goal of this project is to enhance the Piracer by integrating a Park Distance Control (PDC) system, running on a Raspberry Pi (RPi) inside the head unit. The PDC system will utilize ultrasonic sensors to detect the distance between the vehicle and any obstacles, and provide an audible response to the driver. In addition, the full stack feature development will be integrated into the existing Yocto image, creating a comprehensive and fully functional system. The project aims to provide hands-on experience in developing and integrating advanced driver-assistance features, as well as provide a deeper understanding of the software and hardware involved in modern vehicles. The following sections will provide further details on the technical requirements, system architecture, software design, implementation, results, and references for this project.  
 </br>
 
 
-# Background Information
-
-The field of automotive engineering has seen a significant shift in recent years towards incorporating more advanced technologies into vehicles. With the rise of embedded systems, sensors, and the Internet of Things (IoT), it has become possible to add features to vehicles that were previously thought impossible. One such feature is the Park Distance Control (PDC) system. PDC is a system that uses ultrasonic sensors to measure the distance between a vehicle and obstacles, and provides visual and audible alerts to the driver to assist with parking.
-
-The purpose of this project is to implement a PDC system on a Raspberry Pi (RPi) that is integrated into the head unit of the PiRacer. The RPi will use ultrasonic sensors to measure the distance between the PiRacer and any obstacles, and provide visual and audible feedback to the driver to assist with parking. This project will also involve the development of full-stack features for the PDC system, including the integration of the ultrasonic sensors, the RPi, and the existing Yocto image.  
-</br>
-
-
-# Project Goals and Objectives
+## Project Goals and Objectives
 
 Project Goals:
 
@@ -52,7 +38,7 @@ Project Objectives:
 </br>
 
 
-# Technical Requirements
+## Technical Requirements
 
 the following technical requirements must be considered for the implementation of the Park Distance Control (PDC) system:
 
@@ -70,59 +56,15 @@ the following technical requirements must be considered for the implementation o
     * Distance measurement: The software must be able to measure the distances between the car and objects in front of it accurately.
     * Audible response: The software must provide an audible response to the driver to indicate the distance between the car and an object.
     * Display integration: The PDC functionality must be integrated into the existing head unit software and displayed on the screen.
-    * Inter-Process Communication (IPC): The PDC software must be able to communicate with other components in the head unit using a suitable IPC mechanism such as vsomeip or autosar.
 4. Non-Functional Requirements:
     * Performance: The PDC software must be able to process distance measurements in real-time, with low latency.
     * Reliability: The software must be robust and reliable, with minimal downtime.
     * Maintainability: The code must be well-documented and easy to maintain, with a modular design.
 
-By meeting these technical requirements, the PDC system will be able to provide the necessary functionality to the head unit and enable the driver to have a clear understanding of the distance between their car and any obstacles.  
+
 </br>
 
-
-# System Architecture
-
-The system architecture for the Park Distance Control (PDC) system consists of several components that work together to provide an accurate and reliable measurement of the distance between the vehicle and an object. The following are the key components of the system architecture:
-
-1. Ultrasonic Sensors: These sensors emit and receive high-frequency sound waves that are used to measure the distance between the vehicle and an object. The sensors will be placed at the front and rear of the vehicle to detect objects in the path of the vehicle.
-2. Raspberry Pi (RPi): This single-board computer will be used as the central processing unit for the PDC system. The RPi will process the signals from the ultrasonic sensors and provide the necessary control signals to the head unit.
-3. Head Unit: This unit will serve as the main interface for the PDC system and will display the distance between the vehicle and an object on a display screen. The head unit will also provide an audible response to the driver in the form of a beep or tone to indicate the distance between the vehicle and an object.
-4. Inter-Process Communication (IPC): To enable communication between the head unit and the RPi, a suitable IPC mechanism such as vsomeip/autosar will be used.
-5. CAN Bus: The Controller Area Network (CAN) bus will be used to transmit data between the RPi and the head unit. The CAN bus will allow the RPi to send information about the distance between the vehicle and an object to the head unit, which will then be displayed to the driver.
-
-The components of the system architecture will work together to provide an accurate and reliable measurement of the distance between the vehicle and an object. The RPi will process the signals from the ultrasonic sensors and provide the necessary control signals to the head unit, which will display the distance to the driver. The IPC and CAN bus will facilitate communication between the head unit and the RPi.  
-</br>
-
-
-# Software Design
-
-The software design for the Park Distance Control (PDC) system implementation consists of the following components:
-
-1. Sensor Interface: The ultrasonic sensors will be integrated with the existing setup and connected to the Raspberry Pi (RPi) for data collection.
-2. Data Processing: The data collected from the sensors will be processed by the RPi to determine the distance between the sensors and any obstacle in the path.
-3. User Interface: The user interface of the PDC system will be integrated with the existing head unit application running on the RPi. The user will be able to access the PDC feature through the head unit's GUI, with visual and audible distance indications.
-4. Sound Output: An audible response feature will be added to the PDC system, to provide the driver with additional feedback on the proximity of obstacles.
-5. Inter-Process Communication (IPC): To enable communication between the different components of the system, IPC protocols such as vsomeip or AUTOSAR can be used.
-6. Control Unit: The RPi will act as the control unit, managing the PDC system and ensuring that the correct information is displayed to the user through the head unit's GUI.
-
-The software design will be implemented using a modular approach, with well-defined interfaces between the different components to ensure ease of maintenance and future development. The Yocto image for the RPi will be used as the development platform, allowing for seamless integration with the existing setup.  
-</br>
-
-
-# Implementation
-
-The implementation of the park distance control system will involve several steps, each with its own technical details:
-
-1. Integration of Ultrasonic Sensors: The first step is to integrate the ultrasonic sensors with the piracer. This will require precise measurements and calculations to ensure that the sensors are positioned correctly and have the correct range and accuracy.
-2. Development of Driver Layer: The next step will be to develop the driver layer, which will interface with the ultrasonic sensors and receive the distance readings. This layer will need to be designed with fault-tolerance in mind to ensure reliable operation of the park distance control system.
-3. Implementation of Algorithm: Once the driver layer is in place, the algorithm for the park distance control system can be implemented. This will involve processing the distance readings from the sensors to determine the presence and proximity of obstacles, and using this information to trigger the audible response and display the information on the head unit display.
-4. Integration with Head Unit: The final step is to integrate the park distance control system with the head unit. This will require the development of the user interface for the system, including the display of the distance readings and the provision of the audible response.
-
-Each of these steps will require a high degree of technical expertise, as well as a solid understanding of the underlying hardware and software systems involved. It will be important to take a systematic and thorough approach to each step to ensure that the park distance control system operates reliably and effectively.  
-</br>
-
-
-# Project Timeline
+## Project Timeline
 
 The following is a tentative timeline for the implementation of the Park Distance Control (PDC) system on the RPi inside the head unit of the Piracer:
 
@@ -159,31 +101,7 @@ This timeline assumes that there will not be any major obstacles or delays durin
 </br>
 
 
-# Collaboration and Teamwork
-
-Students will be working in teams of maximum four to complete this project. Each team member will be assigned specific tasks and responsibilities, and will be expected to contribute to the overall success of the project. Teams will be required to submit regular progress reports and to meet with the instructor for check-ins and feedback.  
-</br>
-
-
-# Mentorship and Support
-
-Students will be provided with mentorship and support from the instructor throughout the project. The instructor will be available for questions and guidance, and will hold regular check-ins and progress reports to provide feedback and support.  
-</br>
-
-
-# Reflection and Self-Assessment
-
-Students will be encouraged to reflect on their own learning and progress throughout the project. This will be done through self-assessment exercises and through feedback from the instructor and other team members.  
-</br>
-
-
-# Results
-
-After the successful implementation of the PDC system, the PiRacer will be able to provide drivers with accurate and real-time information about the distance between the vehicle and obstacles in the surrounding environment. This will improve the parking experience and provide a safer and more convenient solution for drivers.  
-</br>
-
-
-# Submission
+## Submission
 
 Turn in a github repository with following information:
 
@@ -196,8 +114,13 @@ Turn in a github repository with following information:
 
 </br>
 
+## Evaluation
+In this project, every team must host ONE final submission demo & presentation (max. 30 mins) in front of all the other teams. Each team must find a way to organize this presentation making sure that all the other teams can be present and participate actively (Please work out what date/time works the best for every team). The date and time of each team's presentation must be communicated to staff well in advance (at least a week in advance). It is presenting team's responsibility to make sure that all the forms are filled in **immediately** after the presentation.
+FORMS will be available soon...
 
-# References
+</br>
+
+## References
 
 Raspberry Pi Foundation. (2021). Raspberry Pi Documentation. https://www.raspberrypi.org/documentation/
 

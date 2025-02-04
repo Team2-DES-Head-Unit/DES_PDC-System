@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>IC Assets/top_bar_menu.png</file>
+        <file>IC Assets/top_bar.png</file>
+        <file>IC Assets/speedometer.png</file>
+        <file>IC Assets/right_dark.png</file>
+        <file>IC Assets/right_bright.png</file>
+        <file>IC Assets/needle.png</file>
+        <file>IC Assets/left_dark.png</file>
+        <file>IC Assets/left_bright.png</file>
+        <file>IC Assets/inner_circle.png</file>
+        <file>IC Assets/bottom_bar.png</file>
+        <file>IC Assets/battery.png</file>
+        <file>IC Assets/background_car.png</file>
+        <file>IC Assets/light/background_car_l.png</file>
+        <file>IC Assets/light/bottom_bar_l.png</file>
+        <file>IC Assets/light/left_dark_l.png</file>
+        <file>IC Assets/light/left_bright_l.png</file>
+        <file>IC Assets/light/needle_l.png</file>
+        <file>IC Assets/light/right_bright_l.png</file>
+        <file>IC Assets/light/right_dark_l.png</file>
+        <file>IC Assets/light/speedometer_l.png</file>
+        <file>IC Assets/light/top_bar_l.png</file>
+        <file>IC Assets/light/top_bar_menu_l.png</file>
+    </qresource>
+</RCC>

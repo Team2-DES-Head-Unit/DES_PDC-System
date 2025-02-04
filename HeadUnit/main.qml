@@ -1149,6 +1149,16 @@ Window {
 
     /////////////////////////////////////////////////////////////////////// dynamic load pages
     Loader{
+        id: pdcQmlLoader
+        source: "pdc_page.qml"
+        active: client.gear === 3
+        visible: client.gear === 3
+        onLoaded: {
+            pdcQmlLoader.visible = false;
+        }
+    }
+
+    Loader{
         id: settingQmlLoader
         source: "setting_page.qml"
         active: true

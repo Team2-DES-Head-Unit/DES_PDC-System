@@ -101,6 +101,11 @@
         <file>HU_Assets/light/Icons/settings_l.png</file>
         <file>HU_Assets/light/Icons/user_phone_l.png</file>
         <file>HU_Assets/light/Icons/mirroring_icon_l.png</file>
+        <file>HU_Assets/Components/PDC/alter_gray.png</file>
+        <file>HU_Assets/Components/PDC/alter_green.png</file>
+        <file>HU_Assets/Components/PDC/alter_yellow.png</file>
+        <file>HU_Assets/Components/PDC/alter_red.png</file>
+        <file>HU_Assets/Components/PDC/pdc_car.png</file>
         <file>usrinfo_page.qml</file>
         <file>pdc_page.qml</file>
     </qresource>

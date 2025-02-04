@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+    	<!-- music -->
+    	<file>Cover/AimeeCarty-cover.jpeg</file>
+    	<file>Cover/AlainaCastillo-cover.jpeg</file>
+    	<file>Cover/BrenJoy-cover.jpeg</file>
+    	<file>Cover/DAY6-cover.jpeg</file>
+    	<file>Cover/Hanumankind-cover.jpeg</file>
+    	<file>Cover/JVKE-cover.jpeg</file>
+    	<file>Cover/Maneskin-cover.jpeg</file>
+    	<file>Cover/SOLOMON-cover.jpeg</file>
+    	<file>Cover/WaveToEarth-cover.jpeg</file>
+    	
+    	<!-- video -->
+    	<file>Thumbnail/Once_upon_a_time_there_was_one_cutest_kitten.png</file>
+    	<file>Thumbnail/World_premiere-The_all_new_Tayron.png</file>
+    	<file>Thumbnail/Pomeranian_Grooming_Teddy_bear_style.png</file>
+    </qresource>
+</RCC>

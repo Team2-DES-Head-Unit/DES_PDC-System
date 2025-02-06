@@ -1,0 +1,12 @@
+[Unit]
+Description=PiRacer Control Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/bin/control.py
+WorkingDirectory=/usr/bin
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+

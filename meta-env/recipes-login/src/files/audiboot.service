@@ -1,0 +1,11 @@
+[Unit]
+Description=Play video on TTY2
+
+[Service]
+ExecStart=/usr/bin/audi.sh
+StandardInput=tty-force
+TTYPath=/dev/tty2
+
+[Install]
+WantedBy=multi-user.target
+

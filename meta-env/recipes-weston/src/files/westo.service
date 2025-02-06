@@ -1,0 +1,19 @@
+[Unit]
+Description=Weston service
+After=graphical.target
+
+[Service]
+ExecStart=/usr/bin/weston --tty=/dev/tty7 --backend=drm-backend.so --idle-time=0
+StandardInput=tty
+Environment="QT_QPA_PLATFORM=wayland"
+Environment="XDG_RUNTIME_DIR=/run/user/1000"
+TTYPath=/dev/tty7
+TTYReset=yes
+TTYVHangup=yes
+KillMode=process
+WorkingDirectory=/usr/bin
+Type=simple
+
+[Install]
+WantedBy=graphical.target
+

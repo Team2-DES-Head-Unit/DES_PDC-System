@@ -655,6 +655,8 @@ Window {
     ///////////////////////////////////////////////////////////////// PDC_component
     Rectangle{
         id: pdc_window
+        x: 392
+        y: 60
         visible: client.gear===3 ? true : false
         width: 618
         height: 480

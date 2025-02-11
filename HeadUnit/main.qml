@@ -1152,7 +1152,7 @@ Window {
         id: pdcQmlLoader
         source: "pdc_page.qml"
         active: client.gear === 3
-        visible: client.gear === 3
+        visible: active
         onLoaded: {
             pdcQmlLoader.visible = false;
         }

@@ -97,6 +97,8 @@ sys/ioctl.h
 -
 unistd.h
 -
+cstdint
+-
 
 ../weather_provider.h
 QGuiApplication
@@ -128,13 +130,13 @@ QJsonArray
 QDebug
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/basic_func.cpp
+/home/seame/DES_PDC-System/HeadUnit/basic_func.cpp
 basic_func.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/basic_func.h
+/home/seame/DES_PDC-System/HeadUnit/basic_func.h
 QTimerEvent
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/basic_func.h
+/home/seame/DES_PDC-System/HeadUnit/basic_func.h
 QObject
 -
 QDateTime
@@ -144,9 +146,9 @@ QTimeZone
 QLocale
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/bluetoothmanager.cpp
+/home/seame/DES_PDC-System/HeadUnit/bluetoothmanager.cpp
 bluetoothmanager.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/bluetoothmanager.h
+/home/seame/DES_PDC-System/HeadUnit/bluetoothmanager.h
 QBluetoothDeviceInfo
 -
 QBluetoothUuid
@@ -158,7 +160,7 @@ QBluetoothSocket
 QDebug
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/bluetoothmanager.h
+/home/seame/DES_PDC-System/HeadUnit/bluetoothmanager.h
 QObject
 -
 QBluetoothDeviceDiscoveryAgent
@@ -172,111 +174,111 @@ QBluetoothDeviceInfo
 QList
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_basic_func.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_basic_func.cpp
 basic_func.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/basic_func.h
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/basic_func.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_bluetoothmanager.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_bluetoothmanager.cpp
 bluetoothmanager.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/bluetoothmanager.h
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/bluetoothmanager.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_clicknotier.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_clicknotier.cpp
 clicknotier.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/clicknotier.h
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/clicknotier.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_client.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_client.cpp
 client.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/client.h
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/client.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_mirror_provider.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_mirror_provider.cpp
 mirror_provider.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/mirror_provider.h
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/mirror_provider.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_music_player.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_music_player.cpp
 music_player.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/music_player.h
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/music_player.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_receiver.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_receiver.cpp
 receiver.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/receiver.h
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/receiver.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_weather_provider.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_weather_provider.cpp
 weather_provider.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/weather_provider.h
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/weather_provider.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_youtube_player.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_youtube_player.cpp
 youtube_player.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/youtube_player.h
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/youtube_player.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/mocs_compilation.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/mocs_compilation.cpp
 EWIEGA46WW/moc_basic_func.cpp
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_basic_func.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_basic_func.cpp
 EWIEGA46WW/moc_bluetoothmanager.cpp
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_bluetoothmanager.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_bluetoothmanager.cpp
 EWIEGA46WW/moc_clicknotier.cpp
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_clicknotier.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_clicknotier.cpp
 EWIEGA46WW/moc_client.cpp
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_client.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_client.cpp
 EWIEGA46WW/moc_mirror_provider.cpp
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_mirror_provider.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_mirror_provider.cpp
 EWIEGA46WW/moc_music_player.cpp
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_music_player.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_music_player.cpp
 EWIEGA46WW/moc_receiver.cpp
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_receiver.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_receiver.cpp
 EWIEGA46WW/moc_weather_provider.cpp
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_weather_provider.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_weather_provider.cpp
 EWIEGA46WW/moc_youtube_player.cpp
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_youtube_player.cpp
+/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/moc_youtube_player.cpp
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/clicknotier.h
+/home/seame/DES_PDC-System/HeadUnit/clicknotier.h
 QObject
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/client.cpp
+/home/seame/DES_PDC-System/HeadUnit/client.cpp
 client.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/client.h
+/home/seame/DES_PDC-System/HeadUnit/client.h
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/client.h
+/home/seame/DES_PDC-System/HeadUnit/client.h
 vsomeip/vsomeip.hpp
 -
 iostream
@@ -294,7 +296,7 @@ QObject
 QDebug
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/main.cpp
+/home/seame/DES_PDC-System/HeadUnit/main.cpp
 QGuiApplication
 -
 QQmlApplicationEngine
@@ -302,25 +304,25 @@ QQmlApplicationEngine
 QQmlContext
 -
 basic_func.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/basic_func.h
+/home/seame/DES_PDC-System/HeadUnit/basic_func.h
 weather_provider.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/weather_provider.h
+/home/seame/DES_PDC-System/HeadUnit/weather_provider.h
 music_player.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/music_player.h
+/home/seame/DES_PDC-System/HeadUnit/music_player.h
 youtube_player.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/youtube_player.h
+/home/seame/DES_PDC-System/HeadUnit/youtube_player.h
 bluetoothmanager.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/bluetoothmanager.h
+/home/seame/DES_PDC-System/HeadUnit/bluetoothmanager.h
 mirror_provider.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/mirror_provider.h
+/home/seame/DES_PDC-System/HeadUnit/mirror_provider.h
 clicknotier.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/clicknotier.h
+/home/seame/DES_PDC-System/HeadUnit/clicknotier.h
 client.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/client.h
+/home/seame/DES_PDC-System/HeadUnit/client.h
 receiver.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/receiver.h
+/home/seame/DES_PDC-System/HeadUnit/receiver.h
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/mirror_provider.h
+/home/seame/DES_PDC-System/HeadUnit/mirror_provider.h
 QObject
 -
 QDebug
@@ -336,7 +338,7 @@ QQuickWindow
 QTimer
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/music_player.h
+/home/seame/DES_PDC-System/HeadUnit/music_player.h
 QDir
 -
 QStringList
@@ -348,9 +350,9 @@ QUrl
 QDebug
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/receiver.cpp
+/home/seame/DES_PDC-System/HeadUnit/receiver.cpp
 receiver.h
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/receiver.h
+/home/seame/DES_PDC-System/HeadUnit/receiver.h
 cstring
 -
 sys/types.h
@@ -370,7 +372,7 @@ unistd.h
 QDebug
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/receiver.h
+/home/seame/DES_PDC-System/HeadUnit/receiver.h
 QThread
 -
 sys/types.h
@@ -387,8 +389,10 @@ sys/ioctl.h
 -
 unistd.h
 -
+cstdint
+-
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/weather_provider.h
+/home/seame/DES_PDC-System/HeadUnit/weather_provider.h
 QGuiApplication
 -
 QQmlApplicationEngine
@@ -404,7 +408,7 @@ QJsonObject
 QJsonArray
 -
 
-/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/youtube_player.h
+/home/seame/DES_PDC-System/HeadUnit/youtube_player.h
 QGuiApplication
 -
 QQmlApplicationEngine

@@ -1,0 +1,26 @@
+# ninja log v5
+254	342	1742451887073207009	HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp	52f3db6b94c2b610
+4	14	0	/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/CMakeFiles/HeadUnit_autogen	df5b745ae50811d2
+359	2482	1742451889217206745	CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.o	9b32c7dca6734ee
+2918	3239	1743075209106499827	HeadUnit	8d5235070cf75b01
+358	1161	1742451887897206906	CMakeFiles/HeadUnit.dir/basic_func.cpp.o	76ea45c70b6af754
+358	1108	1742451887841206913	CMakeFiles/HeadUnit.dir/client.cpp.o	ee2bc2bc9cd1b791
+254	342	1742451887073207009	/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp	52f3db6b94c2b610
+4	14	0	HeadUnit_autogen/mocs_compilation.cpp	df5b745ae50811d2
+4	14	0	CMakeFiles/HeadUnit_autogen	df5b745ae50811d2
+4	14	0	/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/mocs_compilation.cpp	df5b745ae50811d2
+14	180	1743075206038427429	HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp	f56d82603c970e2e
+14	180	1743075206038427429	/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp	f56d82603c970e2e
+358	1341	1742451888077206884	CMakeFiles/HeadUnit.dir/receiver.cpp.o	2b2acfdaa10945cc
+358	1036	1742451887769206923	CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.o	539832765c0479a8
+358	2459	1742451889193206748	CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.o	4e60cb2d383bee38
+180	2918	1743075208782492179	CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.o	2fc5a5466ffe5bb9
+13	1651	1742455107525118029	CMakeFiles/HeadUnit.dir/main.cpp.o	3562e2677291353d
+1	4	0	CMakeFiles/HeadUnit_autogen	df5b745ae50811d2
+1	4	0	HeadUnit_autogen/mocs_compilation.cpp	df5b745ae50811d2
+1	4	0	/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/CMakeFiles/HeadUnit_autogen	df5b745ae50811d2
+1	4	0	/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/mocs_compilation.cpp	df5b745ae50811d2
+4	158	1743075268375909029	HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp	f56d82603c970e2e
+4	158	1743075268375909029	/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp	f56d82603c970e2e
+158	2752	1743075270979971335	CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.o	2fc5a5466ffe5bb9
+2752	3039	1743075271267978227	HeadUnit	8d5235070cf75b01

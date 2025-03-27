@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
+import QtMultimedia 5.12
 //import QtQuick.mirroring 1.0
 //import timeprovider 1.0
 
@@ -510,7 +511,8 @@ Window {
                 id: temp_bar
 //                color: "#03A49A"
                 color: clickNotifier.clicked ? "#7788F2" : "#03A49A"
-                width: (weatherProvider.temperature.toDouble() + 20) / 60 * parent.width // range : -20 ~ 40
+//                width: (weatherProvider.temperature.toDouble() + 20) / 60 * parent.width // range : -20 ~ 40
+                width: (Number(weatherProvider.temperature) + 20) / 60 * parent.width
                 height: parent.height
                 radius: 10
             }
@@ -942,11 +944,12 @@ Window {
     ///////////////////////////////////////////////////////////////// PDC_component
     Rectangle{
         id: pdc_window
-        x: 392
+        x: 397
         y: 60
         visible: client.gear===3 ? true : false
-        width: 618
-        height: 480
+//        visible: true // For pdc test
+        width: 610
+        height: 455
         color: "transparent"
 
         Image {
@@ -954,38 +957,62 @@ Window {
             fillMode: Image.PreserveAspectFit
             anchors.fill: parent
             source: clickNotifier.clicked ? "HU_Assets/light/Background/basic_window_l.png" : "HU_Assets/Background/basic_window.png"
+            VideoOutput {
+                id: cameraView
+                anchors.fill: parent
+                source: camera
+                autoOrientation: true
+                fillMode: VideoOutput.PreserveAspectCrop
+            }
 
+
+            Camera {
+                id: camera
+                focus {
+                    focusMode: Camera.FocusContinuous
+                }
+                imageProcessing {
+                    whiteBalanceMode: Camera.WhiteBalanceAuto
+                    contrast: 1.2
+                }
+            }
             Image {
                 id: car_png
-                x: 139
-                y: 86
+//                x: 139
+//                y: 86
+                x: 415
+                y: 35
+                width: 180
+                height: 115
                 fillMode: Image.PreserveAspectFit
                 source: "HU_Assets/Components/PDC/pdc_car.png"
 
                 Image {
                     id: alter_gauge
-                    x: 1
-                    y: 187
+                    width: 109
+                    height: 62
+                    x: 35
+                    y: 85
                     fillMode: Image.PreserveAspectFit
                     source: "HU_Assets/Components/PDC/alter_gray.png"
                 }
             }
 
-            Text {
-                id: parking_assistant_txt
-                x: 39
-                y: 39
-                text: qsTr("Parking Assistant")
-                font.pixelSize: 30
-                color: clickNotifier.clicked ? "#414141" : "#ffffff"
-            }
+//            Text {
+//                id: parking_assistant_txt
+//                x: 39
+//                y: 39
+//                text: qsTr("Parking Assistant")
+//                font.pixelSize: 30
+//                color: clickNotifier.clicked ? "#414141" : "#ffffff"
+//            }
 
             Text {
                 id: distance_txt
-                x: 320
-                y: 216
+                x: 410
+                y: 10
                 text: qsTr("Distance : ")
-                font.pixelSize: 25
+                font.pixelSize: 22
                 color: clickNotifier.clicked ? "#414141" : "#ffffff"
             }
 
@@ -994,18 +1021,22 @@ Window {
                 anchors{
                     left: distance_txt.right
                     top: distance_txt.top
-                    topMargin: 6
+                    topMargin: 1
                 }
 
                 text: Receiver.distanceCm.toFixed(2) + " cm"
-                font.pixelSize: 18
+                font.pixelSize: 22
                 color: clickNotifier.clicked ? "#414141" : "#ffffff"
             }
 
             Image {
                 id: alter_red
-                x: 189
-                y: 352
+//                x: 189
+//                y: 352
+                width: 40
+                height: 20
+                x: 485
+                y: 145
                 fillMode: Image.PreserveAspectFit
                 source: "HU_Assets/Components/PDC/alter_red.png"
                 visible: Receiver.distanceCm <= 15
@@ -1013,20 +1044,35 @@ Window {
 
             Image {
                 id: alter_yellow
-                x: 167
-                y: 368
+                width: 57
+                height: 39
+                x: 477
+                y: 144
                 fillMode: Image.PreserveAspectFit
                 source: "HU_Assets/Components/PDC/alter_yellow.png"
-                visible: Receiver.distanceCm > 15 && Receiver.distanceCm <= 25
+                visible: Receiver.distanceCm <= 15
+//                visible: Receiver.distanceCm > 15 && Receiver.distanceCm <= 25
             }
 
             Image {
                 id: alter_green
-                x: 140
-                y: 385
+                width: 77
+                height: 59
+                x: 467
+                y: 143
                 fillMode: Image.PreserveAspectFit
                 source: "HU_Assets/Components/PDC/alter_green.png"
-                visible: Receiver.distanceCm > 25
+                visible: Receiver.distanceCm <= 15
+//                visible: Receiver.distanceCm > 25
+            }
+            Image {
+                id: pdc_back
+                width: 425
+                height: 325
+                x: 100
+                y: 138
+                fillMode: Image.PreserveAspectFit
+                source: "HU_Assets/Components/PDC/pdc_back.png"
             }
         }
     }

@@ -1,4 +1,4 @@
-# Install script for directory: /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit
+# Install script for directory: /home/seame/DES_PDC-System/HeadUnit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/seame/DES_PDC-System/HeadUnit/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

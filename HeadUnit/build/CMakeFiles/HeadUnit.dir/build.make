@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit
+CMAKE_SOURCE_DIR = /home/seame/DES_PDC-System/HeadUnit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build
+CMAKE_BINARY_DIR = /home/seame/DES_PDC-System/HeadUnit/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/HeadUnit.dir/depend.make
@@ -59,6 +59,7 @@ include CMakeFiles/HeadUnit.dir/flags.make
 
 HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../qml.qrc
 HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: CMakeFiles/HeadUnit_autogen.dir/AutoRcc_qml_EWIEGA46WW_Info.json
+HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../pdc_page.qml
 HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../media_page.qml
 HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../setting_page.qml
 HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../media_page_youtube.qml
@@ -142,6 +143,11 @@ HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Components/Video/screen_of
 HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Components/Video/youtube_icon.png
 HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Components/Calender/calender_component.png
 HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Components/Calender/calender_bar.png
+HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Components/PDC/alter_gray.png
+HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Components/PDC/alter_red.png
+HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Components/PDC/alter_yellow.png
+HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Components/PDC/alter_green.png
+HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Components/PDC/pdc_car.png
 HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Components/Music/skip_back.png
 HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Components/Music/stop.png
 HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Components/Music/play.png
@@ -162,8 +168,8 @@ HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Background/select_menu.png
 HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Background/basic_window.png
 HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: ../HU_Assets/Background/menu_bar.png
 HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp: /usr/lib/qt5/bin/rcc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic RCC for qml.qrc"
-	/usr/bin/cmake -E cmake_autorcc /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles/HeadUnit_autogen.dir/AutoRcc_qml_EWIEGA46WW_Info.json Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic RCC for qml.qrc"
+	/usr/bin/cmake -E cmake_autorcc /home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles/HeadUnit_autogen.dir/AutoRcc_qml_EWIEGA46WW_Info.json 
 
 HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp: ../media_contents.qrc
 HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp: CMakeFiles/HeadUnit_autogen.dir/AutoRcc_media_contents_EWIEGA46WW_Info.json
@@ -180,112 +186,112 @@ HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp: ../Cover/JVKE-cover.jpeg
 HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp: ../Cover/DAY6-cover.jpeg
 HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp: ../Cover/BrenJoy-cover.jpeg
 HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp: /usr/lib/qt5/bin/rcc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for media_contents.qrc"
-	/usr/bin/cmake -E cmake_autorcc /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles/HeadUnit_autogen.dir/AutoRcc_media_contents_EWIEGA46WW_Info.json Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for media_contents.qrc"
+	/usr/bin/cmake -E cmake_autorcc /home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles/HeadUnit_autogen.dir/AutoRcc_media_contents_EWIEGA46WW_Info.json 
 
 CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.o: CMakeFiles/HeadUnit.dir/flags.make
 CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.o: HeadUnit_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.o -c /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.o -c /home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/mocs_compilation.cpp
 
 CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/mocs_compilation.cpp > CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/mocs_compilation.cpp > CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/mocs_compilation.cpp -o CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/mocs_compilation.cpp -o CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/HeadUnit.dir/main.cpp.o: CMakeFiles/HeadUnit.dir/flags.make
 CMakeFiles/HeadUnit.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HeadUnit.dir/main.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/main.cpp.o -c /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HeadUnit.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/main.cpp.o -c /home/seame/DES_PDC-System/HeadUnit/main.cpp
 
 CMakeFiles/HeadUnit.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HeadUnit.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/main.cpp > CMakeFiles/HeadUnit.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame/DES_PDC-System/HeadUnit/main.cpp > CMakeFiles/HeadUnit.dir/main.cpp.i
 
 CMakeFiles/HeadUnit.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HeadUnit.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/main.cpp -o CMakeFiles/HeadUnit.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame/DES_PDC-System/HeadUnit/main.cpp -o CMakeFiles/HeadUnit.dir/main.cpp.s
 
 CMakeFiles/HeadUnit.dir/basic_func.cpp.o: CMakeFiles/HeadUnit.dir/flags.make
 CMakeFiles/HeadUnit.dir/basic_func.cpp.o: ../basic_func.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HeadUnit.dir/basic_func.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/basic_func.cpp.o -c /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/basic_func.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HeadUnit.dir/basic_func.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/basic_func.cpp.o -c /home/seame/DES_PDC-System/HeadUnit/basic_func.cpp
 
 CMakeFiles/HeadUnit.dir/basic_func.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HeadUnit.dir/basic_func.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/basic_func.cpp > CMakeFiles/HeadUnit.dir/basic_func.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame/DES_PDC-System/HeadUnit/basic_func.cpp > CMakeFiles/HeadUnit.dir/basic_func.cpp.i
 
 CMakeFiles/HeadUnit.dir/basic_func.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HeadUnit.dir/basic_func.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/basic_func.cpp -o CMakeFiles/HeadUnit.dir/basic_func.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame/DES_PDC-System/HeadUnit/basic_func.cpp -o CMakeFiles/HeadUnit.dir/basic_func.cpp.s
 
 CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.o: CMakeFiles/HeadUnit.dir/flags.make
 CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.o: ../bluetoothmanager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.o -c /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/bluetoothmanager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.o -c /home/seame/DES_PDC-System/HeadUnit/bluetoothmanager.cpp
 
 CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/bluetoothmanager.cpp > CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame/DES_PDC-System/HeadUnit/bluetoothmanager.cpp > CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.i
 
 CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/bluetoothmanager.cpp -o CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame/DES_PDC-System/HeadUnit/bluetoothmanager.cpp -o CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.s
 
 CMakeFiles/HeadUnit.dir/client.cpp.o: CMakeFiles/HeadUnit.dir/flags.make
 CMakeFiles/HeadUnit.dir/client.cpp.o: ../client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/HeadUnit.dir/client.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/client.cpp.o -c /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/HeadUnit.dir/client.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/client.cpp.o -c /home/seame/DES_PDC-System/HeadUnit/client.cpp
 
 CMakeFiles/HeadUnit.dir/client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HeadUnit.dir/client.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/client.cpp > CMakeFiles/HeadUnit.dir/client.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame/DES_PDC-System/HeadUnit/client.cpp > CMakeFiles/HeadUnit.dir/client.cpp.i
 
 CMakeFiles/HeadUnit.dir/client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HeadUnit.dir/client.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/client.cpp -o CMakeFiles/HeadUnit.dir/client.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame/DES_PDC-System/HeadUnit/client.cpp -o CMakeFiles/HeadUnit.dir/client.cpp.s
 
 CMakeFiles/HeadUnit.dir/receiver.cpp.o: CMakeFiles/HeadUnit.dir/flags.make
 CMakeFiles/HeadUnit.dir/receiver.cpp.o: ../receiver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/HeadUnit.dir/receiver.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/receiver.cpp.o -c /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/receiver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/HeadUnit.dir/receiver.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/receiver.cpp.o -c /home/seame/DES_PDC-System/HeadUnit/receiver.cpp
 
 CMakeFiles/HeadUnit.dir/receiver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HeadUnit.dir/receiver.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/receiver.cpp > CMakeFiles/HeadUnit.dir/receiver.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame/DES_PDC-System/HeadUnit/receiver.cpp > CMakeFiles/HeadUnit.dir/receiver.cpp.i
 
 CMakeFiles/HeadUnit.dir/receiver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HeadUnit.dir/receiver.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/receiver.cpp -o CMakeFiles/HeadUnit.dir/receiver.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame/DES_PDC-System/HeadUnit/receiver.cpp -o CMakeFiles/HeadUnit.dir/receiver.cpp.s
 
 CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.o: CMakeFiles/HeadUnit.dir/flags.make
 CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.o: HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.o -c /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.o -c /home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp
 
 CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp > CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp > CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.i
 
 CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp -o CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp -o CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.s
 
 CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.o: CMakeFiles/HeadUnit.dir/flags.make
 CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.o: HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.o -c /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.o -c /home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp
 
 CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp > CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp > CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.i
 
 CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp -o CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp -o CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.s
 
 # Object files for target HeadUnit
 HeadUnit_OBJECTS = \
@@ -313,7 +319,7 @@ HeadUnit: CMakeFiles/HeadUnit.dir/build.make
 HeadUnit: /usr/lib/x86_64-linux-gnu/libQt5WebEngine.so.5.12.8
 HeadUnit: /usr/lib/x86_64-linux-gnu/libQt5Multimedia.so.5.12.8
 HeadUnit: /usr/lib/x86_64-linux-gnu/libQt5Bluetooth.so.5.12.8
-HeadUnit: /usr/local/lib/libvsomeip3.so.3.5.1
+HeadUnit: /usr/local/lib/libvsomeip3.so.3.5.4
 HeadUnit: /usr/lib/x86_64-linux-gnu/libQt5WebEngineCore.so.5.12.8
 HeadUnit: /usr/lib/x86_64-linux-gnu/libQt5Quick.so.5.12.8
 HeadUnit: /usr/lib/x86_64-linux-gnu/libQt5WebChannel.so.5.12.8
@@ -323,7 +329,7 @@ HeadUnit: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 HeadUnit: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8
 HeadUnit: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 HeadUnit: CMakeFiles/HeadUnit.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable HeadUnit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable HeadUnit"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HeadUnit.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -337,6 +343,6 @@ CMakeFiles/HeadUnit.dir/clean:
 
 CMakeFiles/HeadUnit.dir/depend: HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp
 CMakeFiles/HeadUnit.dir/depend: HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp
-	cd /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build /home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles/HeadUnit.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/seame/DES_PDC-System/HeadUnit/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/seame/DES_PDC-System/HeadUnit /home/seame/DES_PDC-System/HeadUnit /home/seame/DES_PDC-System/HeadUnit/build /home/seame/DES_PDC-System/HeadUnit/build /home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles/HeadUnit.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/HeadUnit.dir/depend
 

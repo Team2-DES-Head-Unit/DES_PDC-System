@@ -108,5 +108,6 @@
         <file>HU_Assets/Components/PDC/pdc_car.png</file>
         <file>usrinfo_page.qml</file>
         <file>pdc_page.qml</file>
+        <file>HU_Assets/Components/PDC/pdc_back.png</file>
     </qresource>
 </RCC>

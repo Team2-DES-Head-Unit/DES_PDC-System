@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp" "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.o"
-  "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp" "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.o"
-  "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/mocs_compilation.cpp" "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.o"
-  "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/basic_func.cpp" "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles/HeadUnit.dir/basic_func.cpp.o"
-  "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/bluetoothmanager.cpp" "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.o"
-  "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/client.cpp" "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles/HeadUnit.dir/client.cpp.o"
-  "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/main.cpp" "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles/HeadUnit.dir/main.cpp.o"
-  "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/receiver.cpp" "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/CMakeFiles/HeadUnit.dir/receiver.cpp.o"
+  "/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp" "/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.o"
+  "/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp" "/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.o"
+  "/home/seame/DES_PDC-System/HeadUnit/build/HeadUnit_autogen/mocs_compilation.cpp" "/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.o"
+  "/home/seame/DES_PDC-System/HeadUnit/basic_func.cpp" "/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles/HeadUnit.dir/basic_func.cpp.o"
+  "/home/seame/DES_PDC-System/HeadUnit/bluetoothmanager.cpp" "/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.o"
+  "/home/seame/DES_PDC-System/HeadUnit/client.cpp" "/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles/HeadUnit.dir/client.cpp.o"
+  "/home/seame/DES_PDC-System/HeadUnit/main.cpp" "/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles/HeadUnit.dir/main.cpp.o"
+  "/home/seame/DES_PDC-System/HeadUnit/receiver.cpp" "/home/seame/DES_PDC-System/HeadUnit/build/CMakeFiles/HeadUnit.dir/receiver.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -22,8 +22,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "QT_GUI_LIB"
   "QT_MULTIMEDIA_LIB"
   "QT_NETWORK_LIB"
+  "QT_NO_DEBUG"
   "QT_POSITIONING_LIB"
-  "QT_QML_DEBUG"
   "QT_QML_LIB"
   "QT_QUICK_LIB"
   "QT_WEBCHANNEL_LIB"

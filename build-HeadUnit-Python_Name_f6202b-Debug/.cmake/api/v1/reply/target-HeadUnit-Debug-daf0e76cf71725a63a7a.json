@@ -12,11 +12,22 @@
 		[
 			"add_executable",
 			"target_link_libraries",
+			"set_target_properties",
+			"_populate_WebEngine_target_properties",
+			"find_package",
+			"_populate_WebEngineCore_target_properties",
+			"_populate_Quick_target_properties",
+			"_populate_Multimedia_target_properties",
 			"target_compile_definitions"
 		],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"CMakeLists.txt",
+			"/usr/lib/x86_64-linux-gnu/cmake/Qt5WebEngine/Qt5WebEngineConfig.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/Qt5WebEngineCore/Qt5WebEngineCoreConfig.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/Qt5Quick/Qt5QuickConfig.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/Qt5Multimedia/Qt5MultimediaConfig.cmake"
 		],
 		"nodes" : 
 		[
@@ -36,7 +47,105 @@
 				"parent" : 0
 			},
 			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"file" : 2,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 28,
+				"parent" : 4
+			},
+			{
+				"file" : 1,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 162,
+				"parent" : 6
+			},
+			{
 				"command" : 2,
+				"file" : 1,
+				"line" : 44,
+				"parent" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 101,
+				"parent" : 6
+			},
+			{
+				"file" : 3,
+				"parent" : 9
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 162,
+				"parent" : 10
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 44,
+				"parent" : 11
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 28,
+				"parent" : 4
+			},
+			{
+				"file" : 4,
+				"parent" : 13
+			},
+			{
+				"command" : 6,
+				"file" : 4,
+				"line" : 162,
+				"parent" : 14
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 44,
+				"parent" : 15
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 28,
+				"parent" : 4
+			},
+			{
+				"file" : 5,
+				"parent" : 17
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 162,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 5,
+				"line" : 44,
+				"parent" : 19
+			},
+			{
+				"command" : 8,
 				"file" : 0,
 				"line" : 79,
 				"parent" : 0
@@ -49,14 +158,11 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g  "
+					"fragment" : "-g -std=gnu++11"
 				},
 				{
 					"backtrace" : 2,
 					"fragment" : "-fPIC"
-				},
-				{
-					"fragment" : "-std=gnu++11"
 				}
 			],
 			"defines" : 
@@ -86,7 +192,7 @@
 					"define" : "QT_POSITIONING_LIB"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 21,
 					"define" : "QT_QML_DEBUG"
 				},
 				{
@@ -113,14 +219,14 @@
 			"includes" : 
 			[
 				{
-					"path" : "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build"
+					"path" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug"
 				},
 				{
-					"path" : "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit"
+					"path" : "/home/seame/DES_PDC-System/HeadUnit"
 				},
 				{
 					"backtrace" : 0,
-					"path" : "/home/llj/catkin_ws/src/DES_Head-Unit/HeadUnit_Project/HeadUnit/build/HeadUnit_autogen/include"
+					"path" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/include"
 				},
 				{
 					"backtrace" : 2,
@@ -189,6 +295,14 @@
 				}
 			],
 			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "11"
+			},
 			"sourceIndexes" : 
 			[
 				0,
@@ -243,14 +357,16 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/usr/local/lib/libvsomeip3.so.3.5.1",
+				"fragment" : "/usr/local/lib/libvsomeip3.so.3.5.4",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 2,
 				"fragment" : "-lpthread",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 8,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt5WebEngineCore.so.5.12.8",
 				"role" : "libraries"
 			},
@@ -260,22 +376,27 @@
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 12,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt5WebChannel.so.5.12.8",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 16,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt5Qml.so.5.12.8",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 12,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt5Positioning.so.5.12.8",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 16,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 20,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8",
 				"role" : "libraries"
 			},
@@ -348,7 +469,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/HeadUnit_autogen/mocs_compilation.cpp",
+			"path" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -440,26 +561,26 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp",
+			"path" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp",
+			"path" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.rule",
+			"path" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.rule",
 			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.rule",
+			"path" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.rule",
 			"sourceGroupIndex" : 3
 		}
 	],

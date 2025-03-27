@@ -44,13 +44,13 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/HeadUnit_autogen",
+			"path" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/CMakeFiles/HeadUnit_autogen",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/HeadUnit_autogen.rule",
+			"path" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/CMakeFiles/HeadUnit_autogen.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

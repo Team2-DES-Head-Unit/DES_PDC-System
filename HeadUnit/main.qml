@@ -946,8 +946,8 @@ Window {
         id: pdc_window
         x: 397
         y: 60
-        visible: client.gear===3 ? true : false
-//        visible: true // For pdc test
+//        visible: client.gear===3 ? true : false
+        visible: true // For pdc test
         width: 610
         height: 455
         color: "transparent"

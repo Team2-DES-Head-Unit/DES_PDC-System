@@ -1,0 +1,18 @@
+# ninja log v5
+0	249	0	CMakeFiles/HeadUnit_autogen	df5b745ae50811d2
+0	249	0	HeadUnit_autogen/mocs_compilation.cpp	df5b745ae50811d2
+0	249	0	/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/CMakeFiles/HeadUnit_autogen	df5b745ae50811d2
+0	249	0	/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/mocs_compilation.cpp	df5b745ae50811d2
+249	355	1743679161892913903	HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp	52f3db6b94c2b610
+249	355	1743679161892913903	/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp	52f3db6b94c2b610
+249	374	1743679161912913583	HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp	f56d82603c970e2e
+249	374	1743679161912913583	/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp	f56d82603c970e2e
+376	1094	1743679162636901885	CMakeFiles/HeadUnit.dir/receiver.cpp.o	2b2acfdaa10945cc
+375	1168	1743679162708900719	CMakeFiles/HeadUnit.dir/client.cpp.o	ee2bc2bc9cd1b791
+375	1203	1743679162744900137	CMakeFiles/HeadUnit.dir/basic_func.cpp.o	76ea45c70b6af754
+375	1203	1743679162744900137	CMakeFiles/HeadUnit.dir/bluetoothmanager.cpp.o	539832765c0479a8
+375	2517	1743679164056878673	CMakeFiles/HeadUnit.dir/main.cpp.o	3562e2677291353d
+375	2541	1743679164080878274	CMakeFiles/HeadUnit.dir/HeadUnit_autogen/mocs_compilation.cpp.o	4e60cb2d383bee38
+376	2575	1743679164116877677	CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_media_contents.cpp.o	9b32c7dca6734ee
+376	3716	1743679165256858706	CMakeFiles/HeadUnit.dir/HeadUnit_autogen/EWIEGA46WW/qrc_qml.cpp.o	2fc5a5466ffe5bb9
+3716	4051	1743679165592853061	HeadUnit	8d5235070cf75b01

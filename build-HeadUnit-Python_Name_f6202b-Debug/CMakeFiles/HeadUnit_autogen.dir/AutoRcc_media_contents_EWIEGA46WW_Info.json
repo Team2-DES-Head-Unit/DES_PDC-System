@@ -1,0 +1,33 @@
+{
+	"BUILD_DIR" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen",
+	"CMAKE_BINARY_DIR" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/seame/DES_PDC-System/HeadUnit",
+	"CMAKE_SOURCE_DIR" : "/home/seame/DES_PDC-System/HeadUnit",
+	"INCLUDE_DIR" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/seame/DES_PDC-System/HeadUnit/Thumbnail/Pomeranian_Grooming_Teddy_bear_style.png",
+		"/home/seame/DES_PDC-System/HeadUnit/Thumbnail/World_premiere-The_all_new_Tayron.png",
+		"/home/seame/DES_PDC-System/HeadUnit/Thumbnail/Once_upon_a_time_there_was_one_cutest_kitten.png",
+		"/home/seame/DES_PDC-System/HeadUnit/Cover/AlainaCastillo-cover.jpeg",
+		"/home/seame/DES_PDC-System/HeadUnit/Cover/Maneskin-cover.jpeg",
+		"/home/seame/DES_PDC-System/HeadUnit/Cover/WaveToEarth-cover.jpeg",
+		"/home/seame/DES_PDC-System/HeadUnit/Cover/Hanumankind-cover.jpeg",
+		"/home/seame/DES_PDC-System/HeadUnit/Cover/AimeeCarty-cover.jpeg",
+		"/home/seame/DES_PDC-System/HeadUnit/Cover/SOLOMON-cover.jpeg",
+		"/home/seame/DES_PDC-System/HeadUnit/Cover/JVKE-cover.jpeg",
+		"/home/seame/DES_PDC-System/HeadUnit/Cover/DAY6-cover.jpeg",
+		"/home/seame/DES_PDC-System/HeadUnit/Cover/BrenJoy-cover.jpeg"
+	],
+	"LOCK_FILE" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/CMakeFiles/HeadUnit_autogen.dir/AutoRcc_media_contents_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "media_contents" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_media_contents.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt5/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/CMakeFiles/HeadUnit_autogen.dir/AutoRcc_media_contents_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/seame/DES_PDC-System/HeadUnit/media_contents.qrc",
+	"VERBOSITY" : 0
+}

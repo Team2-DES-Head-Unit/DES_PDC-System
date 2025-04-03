@@ -968,6 +968,7 @@ Window {
 
             Camera {
                 id: camera
+                deviceId: "/dev/video0"
                 focus {
                     focusMode: Camera.FocusContinuous
                 }
@@ -1050,8 +1051,8 @@ Window {
                 y: 144
                 fillMode: Image.PreserveAspectFit
                 source: "HU_Assets/Components/PDC/alter_yellow.png"
-                visible: Receiver.distanceCm <= 15
-//                visible: Receiver.distanceCm > 15 && Receiver.distanceCm <= 25
+//                visible: Receiver.distanceCm <= 15
+                visible: Receiver.distanceCm > 15 && Receiver.distanceCm <= 25
             }
 
             Image {
@@ -1062,8 +1063,8 @@ Window {
                 y: 143
                 fillMode: Image.PreserveAspectFit
                 source: "HU_Assets/Components/PDC/alter_green.png"
-                visible: Receiver.distanceCm <= 15
-//                visible: Receiver.distanceCm > 25
+//                visible: Receiver.distanceCm <= 15
+                visible: Receiver.distanceCm > 25
             }
             Image {
                 id: pdc_back

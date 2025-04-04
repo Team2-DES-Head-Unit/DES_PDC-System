@@ -14,7 +14,7 @@ Window {
     color: clickNotifier.clicked ? "#FCFCFC" : "#1E1E1E"
     title: qsTr("Head Unit")
 //    flags: Qt.FramelessWindowHint
-    visibility: Window.FullScreen
+//    visibility: Window.FullScreen
 
     property bool isBluetoothConnected: false
 
@@ -957,15 +957,18 @@ Window {
             fillMode: Image.PreserveAspectFit
             anchors.fill: parent
             source: clickNotifier.clicked ? "HU_Assets/light/Background/basic_window_l.png" : "HU_Assets/Background/basic_window.png"
-            MediaPlayer {
-                    id: player
-                    source: "v4l2:///dev/video1"
-                    autoPlay: true
+            Camera {
+                    id: cam
+                     deviceId: "/dev/video1"
                 }
 
             VideoOutput {
                 anchors.fill: parent
-                source: player
+                source: cam
+            }
+
+            Component.onCompleted: {
+                cam.start()
             }
 
 

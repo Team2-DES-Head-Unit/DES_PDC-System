@@ -4,7 +4,8 @@
 #include <QQmlContext>
 //#include <QWindow>
 //#include <QProcess>
-
+#include <QCamera>
+#include <QCameraInfo>
 #include "basic_func.h"
 #include "weather_provider.h"
 #include "music_player.h"
@@ -65,7 +66,14 @@ int main(int argc, char *argv[])
 //            mainWindow.setPosition(0,0);
 //        }
 //    }
+    QList<QCameraInfo> cameras = QCameraInfo::availableCameras();
 
+        if (cameras.isEmpty()) {
+            qWarning("No camera available");
+            return -1;
+        }
+
+    QCamera camera(cameras[0]);
     receiver.initialize();
     receiver.start();
 

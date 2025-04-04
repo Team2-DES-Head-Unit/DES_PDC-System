@@ -958,17 +958,16 @@ Window {
             anchors.fill: parent
             source: clickNotifier.clicked ? "HU_Assets/light/Background/basic_window_l.png" : "HU_Assets/Background/basic_window.png"
             Camera {
-                    id: cam
-                     deviceId: "/dev/video1"
-                }
-
-            VideoOutput {
-                anchors.fill: parent
-                source: cam
+                    id: camera
+                    objectName: "camera"
+                    captureMode: Camera.CaptureViewfinder
             }
 
-            Component.onCompleted: {
-                cam.start()
+            VideoOutput {
+                id: viewfinder
+                objectName: "viewfinder"
+                source: camera
+                anchors.fill: parent
             }
 
 

@@ -957,26 +957,20 @@ Window {
             fillMode: Image.PreserveAspectFit
             anchors.fill: parent
             source: clickNotifier.clicked ? "HU_Assets/light/Background/basic_window_l.png" : "HU_Assets/Background/basic_window.png"
+            MediaPlayer {
+                    id: player
+                    source: "v4l2:///dev/video0"
+                    autoPlay: true
+                }
+
             VideoOutput {
-                id: cameraView
                 anchors.fill: parent
-                source: camera
-                autoOrientation: true
-                fillMode: VideoOutput.PreserveAspectCrop
+                source: player
             }
 
 
-            Camera {
-                id: camera
-                deviceId: "/dev/video0"
-                focus {
-                    focusMode: Camera.FocusContinuous
-                }
-                imageProcessing {
-                    whiteBalanceMode: Camera.WhiteBalanceAuto
-                    contrast: 1.2
-                }
-            }
+
+
             Image {
                 id: car_png
 //                x: 139

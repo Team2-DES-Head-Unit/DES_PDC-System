@@ -959,7 +959,7 @@ Window {
             source: clickNotifier.clicked ? "HU_Assets/light/Background/basic_window_l.png" : "HU_Assets/Background/basic_window.png"
             MediaPlayer {
                     id: player
-                    source: "v4l2:///dev/video0"
+                    source: "v4l2:///dev/video1"
                     autoPlay: true
                 }
 

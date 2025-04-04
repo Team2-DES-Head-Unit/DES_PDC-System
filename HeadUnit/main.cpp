@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
     QCamera camera(cameras[0]);
     receiver.initialize();
     receiver.start();
-
+    engine.rootContext()->setContextProperty("camera", &camera);
     engine.rootContext()->setContextProperty("timeProvider", &timeProvider);
     engine.rootContext()->setContextProperty("speedProvider", &speedProvider);
     engine.rootContext()->setContextProperty("weatherProvider", &weatherProvider);

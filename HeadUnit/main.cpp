@@ -66,15 +66,17 @@ int main(int argc, char *argv[])
 //            mainWindow.setPosition(0,0);
 //        }
 //    }
-    QCamera *camera = new QCamera("/dev/video0");  // 직접 경로 지정!
+    QList<QCameraInfo> cameras = QCameraInfo::availableCameras();
 
-    if (!camera) {
-        qWarning("Failed to create camera");
-        return -1;
-    }
+        if (cameras.isEmpty()) {
+            qWarning("No camera available");
+            return -1;
+        }
+
+    QCamera camera(cameras[0]);
     receiver.initialize();
     receiver.start();
-    engine.rootContext()->setContextProperty("camera", camera);
+    engine.rootContext()->setContextProperty("camera", &camera);
     engine.rootContext()->setContextProperty("timeProvider", &timeProvider);
     engine.rootContext()->setContextProperty("speedProvider", &speedProvider);
     engine.rootContext()->setContextProperty("weatherProvider", &weatherProvider);

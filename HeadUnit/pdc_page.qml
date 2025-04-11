@@ -20,21 +20,21 @@ Rectangle{
                 objectName: "camera"
                 imageProcessing.whiteBalanceMode: CameraImageProcessing.WhiteBalanceFlash
             }
-            VideoOutput {
-                id: cameraView
-                source: camera
-                anchors.fill: parent
-            }
-            MouseArea {
-                anchors.fill: cameraView;
-                onClicked: {
-                    if (camera.active) {
-                        camera.stop() // This stops the camera if it's active
-                    } else {
-                        camera.start() // This starts the camera if it's not active
-                    }
+        VideoOutput {
+            id: cameraView
+            source: camera
+            anchors.fill: parent
+        }
+        MouseArea {
+            anchors.fill: cameraView;
+            onClicked: {
+                if (camera.active) {
+                    camera.stop() // This stops the camera if it's active
+                } else {
+                    camera.start() // This starts the camera if it's not active
                 }
             }
+        }
         Image {
             id: car_png
             x: 139

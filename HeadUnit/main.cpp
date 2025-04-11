@@ -66,17 +66,17 @@ int main(int argc, char *argv[])
 //            mainWindow.setPosition(0,0);
 //        }
 //    }
-    QList<QCameraInfo> cameras = QCameraInfo::availableCameras();
+    // QList<QCameraInfo> cameras = QCameraInfo::availableCameras();
 
-        if (cameras.isEmpty()) {
-            qWarning("No camera available");
-            return -1;
-        }
+    //     if (cameras.isEmpty()) {
+    //         qWarning("No camera available");
+    //         return -1;
+    //     }
 
-    QCamera camera(cameras[0]);
+    // QCamera camera(cameras[0]);
     receiver.initialize();
     receiver.start();
-    engine.rootContext()->setContextProperty("camera", &camera);
+    // engine.rootContext()->setContextProperty("camera", &camera);
     engine.rootContext()->setContextProperty("timeProvider", &timeProvider);
     engine.rootContext()->setContextProperty("speedProvider", &speedProvider);
     engine.rootContext()->setContextProperty("weatherProvider", &weatherProvider);

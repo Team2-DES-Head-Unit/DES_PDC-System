@@ -147,4 +147,3 @@ void BluetoothManager::onConnectFinished(QDBusPendingCallWatcher *watcher) {
         routeAudioToBluetooth();
     }
 }
-

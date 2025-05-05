@@ -32,5 +32,4 @@ private:
     QString pendingDeviceName;
     void routeAudioToBluetooth();
 };
-
 #endif // BLUETOOTHMANAGER_H

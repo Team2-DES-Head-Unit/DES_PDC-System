@@ -14,7 +14,27 @@ Rectangle{
         fillMode: Image.PreserveAspectFit
         anchors.fill: parent
         source: clickNotifier.clicked ? "HU_Assets/light/Background/basic_window_l.png" : "HU_Assets/Background/basic_window.png"
-
+        
+        Camera {
+                id: camera
+                objectName: "camera"
+                imageProcessing.whiteBalanceMode: CameraImageProcessing.WhiteBalanceFlash
+            }
+        VideoOutput {
+            id: cameraView
+            source: camera
+            anchors.fill: parent
+        }
+        MouseArea {
+            anchors.fill: cameraView;
+            onClicked: {
+                if (camera.active) {
+                    camera.stop() // This stops the camera if it's active
+                } else {
+                    camera.start() // This starts the camera if it's not active
+                }
+            }
+        }
         Image {
             id: car_png
             x: 139

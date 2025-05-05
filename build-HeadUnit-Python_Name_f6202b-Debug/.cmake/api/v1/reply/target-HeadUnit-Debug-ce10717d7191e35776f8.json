@@ -177,6 +177,10 @@
 				},
 				{
 					"backtrace" : 2,
+					"define" : "QT_DBUS_LIB"
+				},
+				{
+					"backtrace" : 2,
 					"define" : "QT_GUI_LIB"
 				},
 				{
@@ -292,6 +296,11 @@
 					"backtrace" : 2,
 					"isSystem" : true,
 					"path" : "/usr/include/x86_64-linux-gnu/qt5/QtBluetooth"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/usr/include/x86_64-linux-gnu/qt5/QtDBus"
 				}
 			],
 			"language" : "CXX",
@@ -353,6 +362,11 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt5Bluetooth.so.5.12.8",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt5DBus.so.5.12.8",
 				"role" : "libraries"
 			},
 			{

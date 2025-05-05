@@ -5,7 +5,7 @@
 		<Option title="HeadUnit"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Quick\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5WebEngine\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5WebEngineCore\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5WebChannel\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Positioning\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Multimedia\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Bluetooth\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\vsomeip3\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Quick\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5DBus\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5WebEngine\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5WebEngineCore\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5WebChannel\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Positioning\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Multimedia\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Bluetooth\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\vsomeip3\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug"/>
@@ -36,6 +36,7 @@
 					<Add option="-DQT_POSITIONING_LIB"/>
 					<Add option="-DQT_MULTIMEDIA_LIB"/>
 					<Add option="-DQT_BLUETOOTH_LIB"/>
+					<Add option="-DQT_DBUS_LIB"/>
 					<Add directory="/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug"/>
 					<Add directory="/home/seame/DES_PDC-System/HeadUnit"/>
 					<Add directory="/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/include"/>
@@ -52,6 +53,7 @@
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtPositioning"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtMultimedia"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtBluetooth"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtDBus"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
@@ -86,6 +88,7 @@
 					<Add option="-DQT_POSITIONING_LIB"/>
 					<Add option="-DQT_MULTIMEDIA_LIB"/>
 					<Add option="-DQT_BLUETOOTH_LIB"/>
+					<Add option="-DQT_DBUS_LIB"/>
 					<Add directory="/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug"/>
 					<Add directory="/home/seame/DES_PDC-System/HeadUnit"/>
 					<Add directory="/home/seame/DES_PDC-System/build-HeadUnit-Python_Name_f6202b-Debug/HeadUnit_autogen/include"/>
@@ -102,6 +105,7 @@
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtPositioning"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtMultimedia"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtBluetooth"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtDBus"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
@@ -387,6 +391,18 @@
 		</Unit>
 		<Unit filename="/home/seame/DES_PDC-System/HeadUnit/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/seame/DES_PDC-System/HeadUnit/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5DBus/Qt5DBusConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5DBus\"/>
+		</Unit>
+		<Unit filename="/home/seame/DES_PDC-System/HeadUnit/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5DBus/Qt5DBusConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5DBus\"/>
+		</Unit>
+		<Unit filename="/home/seame/DES_PDC-System/HeadUnit/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5DBus/Qt5DBusConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5DBus\"/>
+		</Unit>
+		<Unit filename="/home/seame/DES_PDC-System/HeadUnit/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5DBus/Qt5DBusMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5DBus\"/>
 		</Unit>
 		<Unit filename="/home/seame/DES_PDC-System/HeadUnit/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5WebEngine/Qt5WebEngineConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5WebEngine\"/>

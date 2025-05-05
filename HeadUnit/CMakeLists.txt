@@ -25,7 +25,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #    endif()
 #endif()
 
-find_package(Qt5 COMPONENTS Core Quick WebEngine Multimedia Bluetooth REQUIRED)
+find_package(Qt5 COMPONENTS Core Quick DBus WebEngine Multimedia Bluetooth REQUIRED)
 find_package(Qt5 COMPONENTS Core Gui REQUIRED)
 
 set(CMAKE_PREFIX_PATH "/usr/local/lib/cmake/vsomeip")
@@ -79,4 +79,4 @@ endif()
 target_compile_definitions(HeadUnit
   PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 target_link_libraries(HeadUnit
-  PRIVATE Qt5::Core Qt5::Quick Qt5::WebEngine Qt5::Multimedia Qt5::Bluetooth vsomeip3 pthread)
+  PRIVATE Qt5::Core Qt5::Quick Qt5::WebEngine Qt5::Multimedia Qt5::Bluetooth Qt5::DBus vsomeip3 pthread)

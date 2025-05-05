@@ -192,7 +192,6 @@ Rectangle{
                 Component.onCompleted: {
                     deviceModel.clear();
                 }
-
                 Text {
                     id: n_o
                     anchors.top: parent.top
@@ -230,6 +229,46 @@ Rectangle{
                 console.log("Discovery finished.");
                 isSearching = false;
             }
+        }
+
+    }
+    Rectangle {
+        id: toast
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 20
+        width: implicitWidth
+        height: implicitHeight
+        color: "#333333AA"
+        radius: 8
+        visible: false
+        opacity: 0.0
+
+        Text {
+            id: toastText
+            anchors.centerIn: parent
+            color: "white"
+            font.pixelSize: 16
+            text: ""
+        }
+
+        Behavior on opacity { NumberAnimation { duration: 300 } }
+    }
+
+    /* 기존 Column / Connections 블록 아래쪽에 새 Connections 추가 */
+    Connections {
+        target: btManager
+
+        onConnectedToDevice: function(deviceName) {
+            toastText.text = qsTr("Connected to %1").arg(deviceName)
+            toast.visible = true
+            toast.opacity = 1.0
+
+            // 2.5초 뒤 페이드아웃
+            Qt.createQmlObject(
+                "import QtQuick 2.0; Timer { interval: 4000; repeat: false; onTriggered: { toast.opacity = 0.0; toast.visible = false; } }",
+                toast, "toastTimer")
+            .start()
         }
     }
 

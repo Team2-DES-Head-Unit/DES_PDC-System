@@ -1,178 +1,150 @@
-#include "bluetoothmanager.h"
-#include <QBluetoothDeviceInfo>
-#include <QBluetoothUuid>
-#include <QBluetoothLocalDevice>
-#include <QBluetoothSocket>
+#include <QDBusConnection>
+#include <QDBusInterface>
+#include <QDBusReply>
+#include <QDBusObjectPath>
+#include <QDBusPendingCall>
+#include <QDBusPendingCallWatcher>
+#include <QMap>
+#include <QVariant>
 #include <QDebug>
+#include <QProcess>
+#include <QDBusMessage>
+#include <QDBusArgument>
+#include <QTimer>
+#include <QProcess>
 
-BluetoothManager::BluetoothManager(QObject *parent) :
-    QObject(parent),
-    discoveryAgent(new QBluetoothDeviceDiscoveryAgent(this)),
-    localDevice(new QBluetoothLocalDevice),
-    socket(new QBluetoothSocket(QBluetoothServiceInfo::RfcommProtocol, this))
-{
-    connect(discoveryAgent, &QBluetoothDeviceDiscoveryAgent::deviceDiscovered,
-            this, &BluetoothManager::deviceDiscoveredHandler);
-    connect(discoveryAgent, &QBluetoothDeviceDiscoveryAgent::finished,
-            this, &BluetoothManager::discoveryFinishedHandler);
+#include "bluetoothmanager.h"
 
-    connect(socket, &QBluetoothSocket::connected,
-            this, &BluetoothManager::connectedHandler);
-    connect(socket, &QBluetoothSocket::disconnected,
-            this, &BluetoothManager::disconnectedHandler);
-    connect(socket, QOverload<QBluetoothSocket::SocketError>::of(&QBluetoothSocket::error),
-            this, &BluetoothManager::socketErrorHandler);
+using ManagedObjects = QMap<QDBusObjectPath, QMap<QString, QMap<QString, QVariant>>>;
+Q_DECLARE_METATYPE(ManagedObjects)
 
-    connect(localDevice, &QBluetoothLocalDevice::pairingFinished,
-            this, &BluetoothManager::pairingFinishedHandler);
-}
+BluetoothManager::BluetoothManager(QObject *parent) : QObject(parent) {}
 
-BluetoothManager::~BluetoothManager()
-{
-    delete discoveryAgent;
-    delete localDevice;
-    delete socket;
-}
-
-void BluetoothManager::startDiscovery()
-{
-    if (localDevice->isValid()) {
-        qDebug() << "Starting device discovery...";
-
-        // 발견된 장치 리스트 초기화
-        discoveredDevices.clear();
-
-        // 이미 페어링된 장치 추가
-//        QList<QBluetoothAddress> pairedDevices = localDevice->pairedDevices();
-//        for (const QBluetoothAddress &address : pairedDevices) {
-//            QBluetoothDeviceInfo pairedDevice(address, QString(), 0);
-//            discoveredDevices.append(pairedDevice);  // 목록에 추가
-//            qDebug() << "Paired device found:" << address.toString();
-
-//            // UI에 표시하기 위해 시그널을 발생시킴
-//            emit deviceDiscovered(address.toString(), "Paired Device");
-//        }
-
-        // 장치 검색 시작
-        discoveryAgent->start();
+QString BluetoothManager::getAdapterPath() {
+    QDBusInterface manager("org.bluez", "/", "org.freedesktop.DBus.ObjectManager", QDBusConnection::systemBus());
+    QDBusMessage reply = manager.call("GetManagedObjects");
+    if (reply.type() != QDBusMessage::ReplyMessage) return "";
+    QList<QVariant> args = reply.arguments();
+    if (args.size() != 1) return "";
+    const QDBusArgument &arg = args.first().value<QDBusArgument>();
+    ManagedObjects objects;
+    arg >> objects;
+    for (auto it = objects.constBegin(); it != objects.constEnd(); ++it) {
+        const auto &interfaces = it.value();
+        if (interfaces.contains("org.bluez.Adapter1")) {
+            return it.key().path();
+        }
     }
+    return "";
 }
 
-void BluetoothManager::stopDiscovery()
-{
-    if (discoveryAgent->isActive()) {
-        qDebug() << "Stopping device discovery...";
-        discoveryAgent->stop();
+void BluetoothManager::startDiscovery() {
+    QString adapterPath = getAdapterPath();
+    if (adapterPath.isEmpty()) return;
+    QDBusInterface adapter("org.bluez", adapterPath, "org.bluez.Adapter1", QDBusConnection::systemBus());
+    QDBusReply<void> reply = adapter.call("StartDiscovery");
+    if (!reply.isValid()) return;
+    QTimer::singleShot(4000, this, &BluetoothManager::fetchAllDevices);
+    fetchAllDevices();
+}
+
+void BluetoothManager::stopDiscovery() {
+    QString adapterPath = getAdapterPath();
+    if (adapterPath.isEmpty()) return;
+    QDBusInterface adapter("org.bluez", adapterPath, "org.bluez.Adapter1", QDBusConnection::systemBus());
+    QDBusReply<void> reply = adapter.call("StopDiscovery");
+    if (reply.isValid()) emit discoveryFinished();
+}
+
+void BluetoothManager::fetchAllDevices() {
+    QDBusInterface manager("org.bluez", "/", "org.freedesktop.DBus.ObjectManager", QDBusConnection::systemBus());
+    QDBusMessage reply = manager.call("GetManagedObjects");
+    QList<QVariant> args = reply.arguments();
+    const QDBusArgument &arg = args.first().value<QDBusArgument>();
+    ManagedObjects objects;
+    arg >> objects;
+    for (auto it = objects.constBegin(); it != objects.constEnd(); ++it) {
+        const auto &interfaces = it.value();
+        if (interfaces.contains("org.bluez.Device1")) {
+            const auto &props = interfaces["org.bluez.Device1"];
+            QString name = props.value("Name", "").toString();
+            QString type = props.value("Icon", "Unknown").toString();
+            emit deviceDiscovered(name, type);
+        }
     }
+    emit discoveryFinished();
 }
 
-void BluetoothManager::connectToDevice(const QString &deviceName)
-{
-    qDebug() << "Attempting to connect to device:" << deviceName;
-
-    for (const QBluetoothDeviceInfo &deviceInfo : discoveredDevices) {
-        if (deviceInfo.name() == deviceName) {
-            qDebug() << "Device found, checking pairing status:" << deviceName;
-
-            QBluetoothLocalDevice::Pairing pairingStatus = localDevice->pairingStatus(deviceInfo.address());
-            if (pairingStatus == QBluetoothLocalDevice::Unpaired) {
-                qDebug() << "Requesting pairing for device:" << deviceName;
-                localDevice->requestPairing(deviceInfo.address(), QBluetoothLocalDevice::Paired);
-            } else {
-                qDebug() << "Device already paired. Connecting to service...";
-                socket->connectToService(deviceInfo.address(), QBluetoothUuid(QBluetoothUuid::SerialPort), QIODevice::ReadWrite);
+QString BluetoothManager::getDevicePathByName(const QString &name) {
+    QDBusInterface manager("org.bluez", "/", "org.freedesktop.DBus.ObjectManager", QDBusConnection::systemBus());
+    QDBusMessage reply = manager.call("GetManagedObjects");
+    QList<QVariant> args = reply.arguments();
+    const QDBusArgument &arg = args.first().value<QDBusArgument>();
+    ManagedObjects objects;
+    arg >> objects;
+    for (auto it = objects.constBegin(); it != objects.constEnd(); ++it) {
+        const auto &interfaces = it.value();
+        if (interfaces.contains("org.bluez.Device1")) {
+            const auto &props = interfaces["org.bluez.Device1"];
+            if (props.value("Name", "").toString() == name) {
+                return it.key().path();
             }
+        }
+    }
+    return "";
+}
+
+void BluetoothManager::connectToDevice(const QString &deviceName) {
+    QString devicePath = getDevicePathByName(deviceName);
+    if (devicePath.isEmpty()) {
+        emit connectionFailed("장치 경로를 찾을 수 없습니다.");
+        return;
+    }
+    pendingDeviceName = deviceName;
+
+    QDBusInterface device("org.bluez", devicePath, "org.bluez.Device1", QDBusConnection::systemBus());
+    QVariant iconVariant = device.property("Icon");
+    QString icon = iconVariant.isValid() ? iconVariant.toString() : "";
+
+    if (icon == "phone") {
+        // Register Agent only for phones
+        QDBusInterface agentManager("org.bluez", "/org/bluez", "org.bluez.AgentManager1", QDBusConnection::systemBus());
+        QVariant agentPath = QVariant::fromValue(QDBusObjectPath("/my/agent"));
+        QVariant capability = QVariant::fromValue(QStringLiteral("DisplayYesNo"));
+        QDBusReply<void> agentReply = agentManager.call("RegisterAgent", agentPath, capability);
+
+        if (!agentReply.isValid()) {
+            qWarning() << "[Bluetooth][DBus] Agent 등록 실패:" << agentReply.error().message();
+        }
+
+        QDBusReply<void> pairReply = device.call("Pair");
+        if (!pairReply.isValid()) {
+            qWarning() << "[Bluetooth][DBus] Pair 실패:" << pairReply.error().message();
+            emit connectionFailed(pairReply.error().message());
             return;
         }
     }
 
-    qWarning() << "Device not found in discovered devices:" << deviceName;
+    QDBusPendingCall call = device.asyncCall("Connect");
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, &BluetoothManager::onConnectFinished);
 }
 
-void BluetoothManager::deviceDiscoveredHandler(const QBluetoothDeviceInfo &deviceInfo)
-{
-    QString deviceName = deviceInfo.name();
-    QString deviceType = getDeviceType(deviceInfo);
-
-    discoveredDevices.append(deviceInfo);
-
-    emit deviceDiscovered(deviceName, deviceType);
+void BluetoothManager::routeAudioToBluetooth() {
+    QProcess::execute("sh", {"-c", "CARD=$(pactl list cards short | grep bluez_card | awk '{print $1}'); if [ -n \"$CARD\" ]; then pactl set-card-profile $CARD a2dp_sink; fi"});
+    QProcess::execute("sh", {"-c", "SINK=$(pactl list short sinks | grep bluez_sink | awk '{print $2}' | head -n1); if [ -n \"$SINK\" ]; then pactl set-default-sink $SINK; for i in $(pactl list short sink-inputs | awk '{print $1}'); do pactl move-sink-input $i $SINK; done; fi"});
 }
 
-QString BluetoothManager::getDeviceType(const QBluetoothDeviceInfo &deviceInfo) const
-{
-    int majorClass = deviceInfo.majorDeviceClass();
-
-    switch (majorClass) {
-        case 0: // Miscellaneous
-            return "Miscellaneous";
-        case 1: // Computer
-            return "Computer";
-        case 2: // Phone
-            return "Phone";
-        case 4: // Audio
-            return "Audio";
-        case 5: // Peripheral
-            return "Peripheral";
-        case 6: // Wearable
-            return "Wearable";
-        default:
-            return "Unknown";
-    }
-}
-
-void BluetoothManager::discoveryFinishedHandler()
-{
-    qDebug() << "Device discovery finished.";
-    emit discoveryFinished();
-}
-
-void BluetoothManager::connectedHandler()
-{
-    qDebug() << "Connected to device.";
-    emit connectedToDevice();
-}
-
-void BluetoothManager::disconnectedHandler()
-{
-    qWarning() << "Bluetooth connection lost.";
-    emit connectionLost();
-}
-
-void BluetoothManager::socketErrorHandler(QBluetoothSocket::SocketError error)
-{
-    qWarning() << "Bluetooth connection error:" << error << socket->errorString();
-    emit connectionFailed(socket->errorString());
-}
-
-void BluetoothManager::pairingFinishedHandler(const QBluetoothAddress &address, QBluetoothLocalDevice::Pairing pairing)
-{
-    if (pairing == QBluetoothLocalDevice::Paired || pairing == QBluetoothLocalDevice::AuthorizedPaired) {
-        qDebug() << "Pairing successful, attempting to connect.";
-        for (const QBluetoothDeviceInfo &deviceInfo : discoveredDevices) {
-            if (deviceInfo.address() == address) {
-                connectToDevice(deviceInfo.name());
-                return;
-            }
-        }
+void BluetoothManager::onConnectFinished(QDBusPendingCallWatcher *watcher) {
+    QDBusPendingReply<> reply = *watcher;
+    watcher->deleteLater();
+    if (reply.isError()) {
+        qWarning() << "[Bluetooth][DBus] Connect 실패:" << reply.error().message();
+        emit connectionFailed(reply.error().message());
     } else {
-        qWarning() << "Pairing failed or unpaired.";
+        qDebug() << "[Bluetooth][DBus] 장치 연결됨";
+        emit connectedToDevice(pendingDeviceName);
+        routeAudioToBluetooth();
     }
 }
 
-void BluetoothManager::readSocketData()
-{
-    QByteArray data = socket->readAll();
-    qDebug() << "Data received:" << data;
-    emit dataReceived(data);
-}
-
-void BluetoothManager::sendData(const QByteArray &data)
-{
-    if (socket->state() == QBluetoothSocket::ConnectedState) {
-        socket->write(data);
-        qDebug() << "Data sent:" << data;
-    } else {
-        qWarning() << "Socket is not connected.";
-    }
-}
